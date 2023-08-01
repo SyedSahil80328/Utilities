@@ -1,0 +1,55 @@
+body {
+    font-size: 25px;
+    font-family: Cascadia Mono;
+}
+.container {
+    display: flex;
+    width: 80%;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.element {
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+}
+button {
+    font-size: 30px;
+    background-color: white;
+    border: none;}
+
+button.icon {width: 100%;}
+.times { font-size: 50px;}
+h1 { font-size: 25px;}
+p { white-space: pre-wrap;}
+audio {display: none;}
+#resetHours {display: none;}
+#resetMinutes {display: none;}
+#resetSeconds {display: none;}
+#continue, #stop, #the_end {display: none;}
+
+#menu_button {
+    position: fixed;
+    left: 20px;    
+    top: 20px;
+}
+#menu_contents {
+    width: 200px;
+    position: fixed;
+    text-align: center;
+    top: 50px;
+    left: 25px;
+    display: none;
+    font-family: cursive;
+}
+
+h1 {text-align: center; font-size: 50px;}
+.inner {
+    border: 2px solid red;
+    border-radius: 20px;
+}
+
+.up, .down { transition: all 0.5s ease; height: 50px; vertical-align: top; border-radius: 10px;}
+.up:hover { background-color: green; color: lightgreen; transform: translateY(-10px);}
+.down:hover { background-color: red; color: lightcoral; transform: translateY(10px);}
