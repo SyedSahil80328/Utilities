@@ -24,7 +24,7 @@ body {
 }
 
 div.body {
-    font-family: Cascadia Mono, Segoe UI;
+    font-family: Cascadia Mono, Segoe UI, monospace;
     font-size: 20px;
     padding: 25px;
     max-width: 95%;
@@ -346,6 +346,10 @@ h2 {
         border: solid white;
         border-width: 0 3px 3px 0;
         transform: rotate(45deg);
+    }
+
+    .white {
+        font-size: 10px;
     }
 }
 
