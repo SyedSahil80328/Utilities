@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="mystyles.css">
+    <title>Calc for BE students</title>
+</head>
+<body>
+    <div class="body">
+        <div id="menu_button">
+            <i class="fas fa-bars" onclick="show_menu();"></i>
+        </div>
+        <div id="menu_contents" class="button_unclicked">
+            <a href="index.html">Home</a>
+            <hr><br>
+            <a href="about.html">About Me</a>
+            <hr><br>
+            <a href="calc.html">GPA calc</a>
+            <hr><br>
+            <a href="#">CGPA calc</a>
+        </div>
+
+        <div id="myBody" class="before_click">
+            <h1>CUMULATIVE GRADE POINT AVERAGE CALCULATOR</h1>
+            <p>This is a simple grade calculator that takes your GPAs and process them to extract your CGPA.</p>
+            <p>You can try our CGPA calculator as well to calculate your GPA.</p>
+
+            <br>
+            <div class="container">
+                <div class="selection" id="alter_width"> 
+                    Select number of Semesters you have completed displayed below and click OK to proceed<br>
+                    <p id="Semester" class="COUNT">1</p>
+                    <button onclick="inc_Sem();" class="up_unclicked"><i class="fas fa-arrow-up"></i></button>
+                    <button onclick="dec_Sem();" class="down_unclicked"><i class="fas fa-arrow-down"></i></button>
+                    <button onclick="get_gpa();" class="ok_unclicked">OK<span class="white">  >>></span></button>
+                </div>
+                <br>
+                <div id="gpa_result"></div>
+            </div>
+            <br><br><br>
+            <div id="final_result2" style="text-align: center;background-color: red;border-radius: 20px;color: white;padding: 20px;display: none;width: 95%;"></div>
+        </div>
+    </div>
+</body>
+<script src="controls.js"></script>
+<script src="grade_control.js"></script>
+<script src="print_subjects.js"></script>
+<script src="dataset-n-final_calc.js"></script>
+</html>
+</body>
+</html>
