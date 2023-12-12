@@ -53,7 +53,7 @@ async function get_selections(semester) {
         }
         printit += "<br><h2>PROFESSIONAL ELECTIVES 02</h2>";
         for (i=0 ; i< PE02s.length ; i++) {
-            printit = printit + "<label class='custom-checkbox'><input type='checkbox' value='" + i + "' name='mylist4'><span class='checkmark'></span> " + subjects[PE01s[i]][1] + "</label><br><br>";
+            printit = printit + "<label class='custom-checkbox'><input type='checkbox' value='" + i + "' name='mylist4'><span class='checkmark'></span> " + subjects[PE02s[i]][1] + "</label><br><br>";
         }
     }
 
