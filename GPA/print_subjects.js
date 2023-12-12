@@ -131,14 +131,14 @@ function setdetails (semester) {
         for (i=0 ; i<pe1.length ; i++) 
             if (pe1[i].checked)
                 additional.push(PE01s[i]);
-    }
 
-    if (semester == 7) {
         var pe2 = document.getElementsByName('mylist5');
         for (i=0 ; i<pe2.length ; i++) 
             if (pe2[i].checked)
                 additional.push(PE02s[i]);
-        
+    }
+
+    if (semester == 7) {
         var pe3 = document.getElementsByName('mylist6');
         for (i=0 ; i<pe3.length ; i++) 
             if (pe3[i].checked)
