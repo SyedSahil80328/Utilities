@@ -12,7 +12,12 @@ function set_divelements (codes) {
     return printer;
 }
 
-async function get_selections(semester) {
+async function get_selections(listOfElectives) {
+    for (const e of listOfElectives) {
+        switch(e) {
+            case "OE": 
+        }
+    }
     if (semester == 3 || semester == 4) {
         additional = semester3;
         printit = "<h2>OPEN ELECTIVES</h2>";
@@ -176,8 +181,9 @@ function confirm (semester) {
     document.getElementById('sem_results').style.width = (initialViewportWidth <= 950)?"75%":"100%";
 }
 
-async function get_semester() {
+async function get_semester(d) {
     additional = [];
+    code = d*1;
     s = document.getElementById('Semester').textContent * 1;
     r = document.getElementById('alter_width');
 
@@ -186,7 +192,7 @@ async function get_semester() {
 
     document.getElementById('final_result').style.display = "none";
 
-    switch(s) {
+    if (code==1) switch(s) {
         case 1:
             skeleton = set_divelements(semester1);
             skeleton = skeleton + "<p style='text-align: center;'><button onclick='calculate(1);' class='climax-button'><span class='white'> --> </span>CALCULATE<span class='white'> <-- </span></button></p>";
@@ -227,6 +233,11 @@ async function get_semester() {
         case 8:
             get_selections(8);
             break;
+    }
+    else {
+        skeleton = set_divelements(semester1);
+        if (s >= 2)
+            skeleton += set_divelements(semester2);
     }
 }
 
