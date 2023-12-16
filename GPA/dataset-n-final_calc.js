@@ -95,16 +95,20 @@ var subjects = {
     CS6811: [9,"Project Work"]
 };
 
-var semester1 = ["HS6151","PH6151","MA6151","CS6101","CS6102"];
-var semester2 = ["HS6251","CY6251","MA6251","GE6251","CS6103"];
-var semester3 = ["CS6104","CS6105","MA6351","EE6351"];
-var semester4 = ["CS6106","CS6107","CS6108"];
-var semester5 = ["CS6109","CS6110","CS6111"];
-var semester6 = ["CS6611"];
-var semester7 = [];
-var semester8 = ["CS6811"];
+var semesters = {
+    "semester1": ["HS6151","PH6151","MA6151","CS6101","CS6102"],
+    "semester2": ["HS6251","CY6251","MA6251","GE6251","CS6103"],
+    "semester3": ["CS6104","CS6105","MA6351","EE6351"],
+    "semester4": ["CS6106","CS6107","CS6108"],
+    "semester5": ["CS6109","CS6110","CS6111"],
+    "semester6": ["CS6611"],
+    "semester7": [],
+    "semester8": ["CS6811"]
+};
 
 var additional = [];
+var mylist = new Set();
+electives = ["OE","MSC","PSC","PE01","PE02","PE03","PE04","PE05","PE06","PE07"];
 
 var OEs = ["OE6391","OE6392","OE6393","OE6394"];
 var MSCs = ["MA6201","CS6201","EC6201","CS6202"];
@@ -130,56 +134,22 @@ function getpoint (grade) {
     }
 }
 
-function calculate(semester) {
-    if (semester == 1 || semester == 2) {
-        var array = new Array();
-        const points = new Array();
-        var credpoint = 0;
-        var cred = 0;
-        var point;
-        array = (semester == 1)?semester1:semester2;
+function calculate() {
+    var array = new Array();
+    const points = new Array();
+    var credpoint = 0;
+    var cred = 0;
+    var point;
+    array = additional;
 
-        for (i=0 ; i<array.length ; i++) {
-            point = getpoint(document.getElementById(array[i]).textContent);
-            points.push(point);
-            if (points[i] != -1) {
-                credpoint = credpoint + (points[i] * subjects[array[i]][0]);
-                cred += subjects[array[i]][0];
-            }
+    for (i=0 ; i<array.length ; i++) {
+        point = getpoint(document.getElementById(array[i]).textContent);
+        points.push(point);
+        if (points[i] != -1) {
+            credpoint = credpoint + (points[i] * subjects[array[i]][0]);
+            cred += subjects[array[i]][0];
         }
-
-        document.getElementById('final_result').textContent = "You got '" + (credpoint/cred).toFixed(2) + "' points this time.";
-        document.getElementById('final_result').style.display = "block";
     }
-    else {
-        var array = new Array();
-        const points = new Array();
-        var credpoint = 0;
-        var cred = 0;
-        var point;
-        array = additional;
-
-        for (i=0 ; i<array.length ; i++) {
-            point = getpoint(document.getElementById(array[i]).textContent);
-            points.push(point);
-            if (points[i] != -1) {
-                credpoint = credpoint + (points[i] * subjects[array[i]][0]);
-                cred += subjects[array[i]][0];
-            }
-        }
-
-        if (credpoint == 0) cred = 100;
-
-        document.getElementById('final_result').textContent = "You got '" + (credpoint/cred).toFixed(2) + "' points this time.";
-        document.getElementById('final_result').style.display = "block";
-    }
-}
-
-function calculate_cgpa (semester) {
-    var total = 0;
-    for (i=0 ; i<semester ; i++)
-        total += (document.getElementById('gpa'+(i+1)).value * 1);
-
-    document.getElementById('final_result2').textContent = "You Cumulatively got '" + (total/semester).toFixed(2) + "' points this time.";
-    document.getElementById('final_result2').style.display = "block";
+    document.getElementById('final_result').textContent = "You got '" + (credpoint/cred).toFixed(2) + "' points.";
+    document.getElementById('final_result').style.display = "block";
 }
