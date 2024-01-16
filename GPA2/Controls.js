@@ -114,5 +114,6 @@ function myEventListener () {
     else {
         d.style.background = "none";
         d.textContent = "Please use desktop for animated features.";
+        d.style.width = "100%";
     }
 }
