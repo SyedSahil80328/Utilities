@@ -1,5 +1,4 @@
 function setDivElements (codes) {
-    console.log(additional);
     i = 0;
     printer = 
     `<div id="messenger">${message}</div>
@@ -24,7 +23,6 @@ function setDivElements (codes) {
 }
 
 async function getSelections(listOfElectives) {
-    console.log(additional);
     printit = "";
     myList = new Set();
     for (const e of listOfElectives) {
@@ -121,7 +119,6 @@ async function getSelections(listOfElectives) {
 }
 
 function setDetails () {
-    console.log(additional);
     for (const e of myList) {
         var temp = document.getElementsByName(e);
         var tempArray = [];
@@ -145,7 +142,6 @@ function setDetails () {
 }
 
 function confirm () {
-    console.log(additional);
     skeleton = setDivElements(additional);
     skeleton = skeleton + "<p style='text-align: center;'><button onclick='calculate();' class='climax-button'><span class='white'> --> </span>CALCULATE<span class='white'> <-- </span></button></p>";
     document.getElementById('sem-results').innerHTML = skeleton;
@@ -154,7 +150,6 @@ function confirm () {
 }
 
 async function getSemester(d) {
-    console.log(additional);
     code = d*1;
     s = document.getElementById('semester').textContent * 1;
     r = document.getElementById('alter-width');
@@ -188,7 +183,6 @@ async function getSemester(d) {
         
         case 3:
             additional = empty.concat(semesters["semester3"]);
-            console.log(semesters["semester3"]);
             getSelections(electives.slice(0,1));
             break;
 
@@ -218,6 +212,7 @@ async function getSemester(d) {
             break;
     }
     else {
+        additional = [];
         for (i=1 ; i<=s ; i++) 
             additional = additional.concat(semesters["semester"+i]);
         if (s <= 2) {
