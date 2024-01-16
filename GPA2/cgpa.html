@@ -8,19 +8,32 @@
     <title>Calc for BE students</title>
 </head>
 <script>
-    var message;
+    var message, device;
+    var initialViewportWidth = window.innerWidth;
     function isMobile() {
         const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
         if (regex.test(navigator.userAgent)) {
             console.log("Mobile device detected");
             message = "Swipe on tab to move";
+            device = "mobile";
         } else {
             console.log("Desktop device detected");
             message = "Click on tab to control or use mouse scroll button";
+            device = "desktop";
+        }
+    }
+
+    function widthCheck () {
+        if (initialViewportWidth < 950) {
+            this.document.getElementById('final-result').style.width = "85%";
+            myWidth = "90%";
+        } else {
+            this.document.getElementById('final-result').style.width = "90%";
+            myWidth = "100%";
         }
     }
 </script>
-<body>
+<body onload="isMobile(); widthCheck();">
     <div class="body">
         <div id="menu-button">
             <i class="fas fa-bars" onclick="showMenu();"></i>
