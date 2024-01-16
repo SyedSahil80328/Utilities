@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="mystyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc for BE students</title>
+</head>
+<script>
+    var message, device;
+    var initialViewportWidth = window.innerWidth;
+    function isMobile() {
+        const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+        if (regex.test(navigator.userAgent)) {
+            console.log("Mobile device detected");
+            message = "Swipe on tab to move";
+            device = "mobile";
+        } else {
+            console.log("Desktop device detected");
+            message = "Click on tab to control or use mouse scroll button";
+            device = "desktop";
+        }
+    }
+
+    function widthCheck () {
+        if (initialViewportWidth < 950) {
+            this.document.getElementById('final-result').style.width = "85%";
+            myWidth = "90%";
+        } else {
+            this.document.getElementById('final-result').style.width = "90%";
+            myWidth = "100%";
+        }
+    }
+</script>
+<body onload="isMobile(); widthCheck();">
+    <div class="body">
+        <div id="menu-button">
+            <i class="fas fa-bars" onclick="showMenu();"></i>
+        </div>
+        <div id="menu-contents" class="button-unclicked">
+            <a href="index.html">Home</a>
+            <hr><br>
+            <a href="about.html">About Me</a>
+            <hr><br>
+            <a href="#">GPA calc</a>
+            <hr><br>
+            <a href="cgpa.html">CGPA calc</a>
+        </div>
+
+        <div id="my-body" class="before-click">
+            <h1>GRADE POINT AVERAGE CALCULATOR</h1>
+            <p>This is a simple grade calculator that takes your grade and process them to extract your GPA.</p>
+            <p>You can try our CGPA calculator as well to calculate your CGPA.</p>
+
+            <br>
+            <div class="container">
+                <div class="selection" id="alter-width"> 
+                    Select your Semester displayed below and click OK to proceed<br>
+                    <p id="semester" class="count">1</p>
+                    <button onclick="incSem();" class="up-unclicked"><i class="fas fa-arrow-up"></i></button>
+                    <button onclick="decSem();" class="down-unclicked"><i class="fas fa-arrow-down"></i></button>
+                    <button onclick="getSemester(1);" class="ok-unclicked">OK<span class="white">  >>></span></button>
+                </div>
+                <br>
+                <div id="sem-results"></div>
+            </div>
+            <br><br><br>
+            <div id="final-result"></div>
+        </div>
+    </div>
+</body>
+<script src="Controls.js"></script>
+<script src="GradeControl.js"></script>
+<script src="PrintSubjects.js"></script>
+<script src="DatasetAndFinalCalc.js"></script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="mystyles.css">
+    <title>Calc for BE students</title>
+</head>
+<script>
+    var message;
+    function isMobile() {
+        const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+        if (regex.test(navigator.userAgent)) {
+            console.log("Mobile device detected");
+            message = "Swipe on tab to move";
+        } else {
+            console.log("Desktop device detected");
+            message = "Click on tab to control or use mouse scroll button";
+        }
+    }
+</script>
+<body>
+    <div class="body">
+        <div id="menu-button">
+            <i class="fas fa-bars" onclick="showMenu();"></i>
+        </div>
+        <div id="menu-contents" class="button-unclicked">
+            <a href="index.html">Home</a>
+            <hr><br>
+            <a href="about.html">About Me</a>
+            <hr><br>
+            <a href="calc.html">GPA calc</a>
+            <hr><br>
+            <a href="#">CGPA calc</a>
+        </div>
+
+        <div id="my-body" class="before-click">
+            <h1>CUMULATIVE GRADE POINT AVERAGE CALCULATOR</h1>
+            <p>This is a simple grade calculator that takes your grades and process them to extract your CGPA.</p>
+            <p>You can try our GPA calculator as well to calculate your GPA.</p>
+
+            <br>
+            <div class="container">
+                <div class="selection" id="alter-width"> 
+                    Select number of Semesters you have completed displayed below and click OK to proceed<br>
+                    <p id="semester" class="count">1</p>
+                    <button onclick="incSem();" class="up-unclicked"><i class="fas fa-arrow-up"></i></button>
+                    <button onclick="decSem();" class="down-unclicked"><i class="fas fa-arrow-down"></i></button>
+                    <button onclick="getSemester(2);" class="ok-unclicked">OK<span class="white">  >>></span></button>
+                </div>
+                <br>
+                <div id="sem-results"></div>
+            </div>
+            <br><br><br>
+            <div id="final-result"></div>
+        </div>
+    </div>
+</body>
+<script src="Controls.js"></script>
+<script src="GradeControl.js"></script>
+<script src="PrintSubjects.js"></script>
+<script src="DatasetAndFinalCalc.js"></script>
+</html>
+</body>
+</html>
