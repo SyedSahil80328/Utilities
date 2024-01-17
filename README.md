@@ -1,7 +1,9 @@
-Utilities
+# Utilities
+<p>To use my GPA calculator, follow this link:</p>
+<a href="https://syed-sahil-100.github.io/Utilities/GPA2/calc.html">GPA Calculator</a><br>
+<a href="https://syed-sahil-100.github.io/Utilities/GPA2/cgpa.html">CGPA Calculator</a>
 
-https://in.skillup.online/dashboard/
+# Blind Navigator
+<p>In this repository, only a prototype will be present and there will be no installation procedures in this repository, so I recommend you to click the link below for personalised usage.</p>
+<a href="https://github.com/syed-sahil-100/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation">Blind Navigation Official Repository</a>
 
-To use my GPA calculator, follow this link:
-
-https://syed-sahil-100.github.io/Utilities/GPA/calc.html
