@@ -107,7 +107,7 @@ function myEventListener () {
                 element.addEventListener('click', function () {
                     for (i=0 ; i<r.length ; i++)    
                         r[i].style.background = "#3498db";
-                    document.getElementById('messenger').textContent = "Control with arrows to change course";
+                    document.getElementById('messenger').textContent = "Control with left/right arrow button to change course";
                 });
             });
     }
