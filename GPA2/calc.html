@@ -14,11 +14,11 @@
         const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
         if (regex.test(navigator.userAgent)) {
             console.log("Mobile device detected");
-            message = "Swipe on tab to move";
+            message = "Swipe left/right on the tab to move";
             device = "mobile";
         } else {
             console.log("Desktop device detected");
-            message = "Click on tab to control or use mouse scroll button";
+            message = "Click on tab to control or use mouse scroll button (Shift+Scroll)";
             device = "desktop";
         }
     }
