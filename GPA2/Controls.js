@@ -14,37 +14,59 @@ function sleep (ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function showMenu() {
+async function showMenu(val) {
     s = document.getElementById("my-body");
     t = document.getElementById("menu-contents");
-    document.getElementById("menu-button").innerHTML = "<i class='fas fa-times' onclick='hideMenu();'></i>";
+    document.getElementById("menu-button").innerHTML = `<i class='fas fa-times' onclick='hideMenu(${val});'></i>`;
+    if (val*1 == 2 && answered == 0)
+        document.getElementById('lateral-checker').style.display = "none";
 
     s.classList.remove('before-click');
     s.classList.add('after-click');
 
     t.style.display = "block";
     await sleep (10);
-    if (initialViewportWidth <= 950) 
+    if (initialViewportWidth <= 950)
         s.style.display = 'none';
 
     t.classList.remove('button-unclicked');
     t.classList.add('button-clicked');
 }
 
-async function hideMenu() {
+async function hideMenu(val) {
     s = document.getElementById("my-body");
     t = document.getElementById("menu-contents");
-    document.getElementById("menu-button").innerHTML = "<i class='fas fa-bars' onclick='showMenu();'></i>";
+    document.getElementById("menu-button").innerHTML = `<i class='fas fa-bars' onclick='showMenu(${val});'></i>`;
 
     t.classList.remove('button-clicked');
     t.classList.add('button-unclicked');
     
     await sleep(200);
     t.style.display = "none";
+    if (val*1 == 2 && answered == 0)
+        document.getElementById('lateral-checker').style.display = "block";
 
     s.classList.remove('after-click');
     s.classList.add('before-click');
-    s.style.display = 'block';
+
+    if (initialViewportWidth <= 950 && answered == 1) 
+        s.style.display = 'block';
+}
+
+function checkIfLateral(val) {
+    var actVal = val*1;
+    answered = 1;
+    if (actVal == 1) {
+        startSem = 3;
+        document.getElementById("semester").textContent = 3;
+    }
+    else {
+        startSem = 1;
+        document.getElementById("semester").textContent = 1;
+    }
+    document.getElementById("my-body").style.display = "block";
+    document.getElementById("lateral-checker").style.display = "none";
+
 }
 
 function myEventListener () {
@@ -93,23 +115,23 @@ function myEventListener () {
             });
         });
         
-            document.addEventListener('click', function (event) {
-                if (!Array.from(r).some(elem => elem.contains(event.target))) {
-                    r.forEach(function (element) {
-                        element.style.background = 'white';
-                    });
-        
-                    document.getElementById('messenger').textContent = message;
-                }
-            });
-
-            r.forEach(function(element) {
-                element.addEventListener('click', function () {
-                    for (i=0 ; i<r.length ; i++)    
-                        r[i].style.background = "#3498db";
-                    document.getElementById('messenger').textContent = "Control with left/right arrow button to change course";
+        document.addEventListener('click', function (event) {
+            if (!Array.from(r).some(elem => elem.contains(event.target))) {
+                r.forEach(function (element) {
+                    element.style.background = 'white';
                 });
+    
+                document.getElementById('messenger').textContent = message;
+            }
+        });
+
+        r.forEach(function(element) {
+            element.addEventListener('click', function () {
+                for (i=0 ; i<r.length ; i++)    
+                    r[i].style.background = "#3498db";
+                document.getElementById('messenger').textContent = "Control with left/right arrow button to change course";
             });
+        });
     }
     else {
         d.style.background = "none";
