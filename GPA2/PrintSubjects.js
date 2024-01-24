@@ -213,7 +213,7 @@ async function getSemester(d) {
     }
     else {
         additional = [];
-        for (i=1 ; i<=s ; i++) 
+        for (i=startSem ; i<=s ; i++) 
             additional = additional.concat(semesters["semester"+i]);
         if (s <= 2) {
             if (s == 1)
@@ -228,12 +228,16 @@ async function getSemester(d) {
             myEventListener();
         }
         else {
-            if (s >= 3)
-                getSelections(
-                    (s==3)?electives.slice(0,1):((s==4)?electives.slice(0,2):
-                    ((s==5)?electives.slice(0,3):((s==6)?electives.slice(0,5):
-                    ((s==7)?electives.slice(0,8):electives))))
-                );
+            alert(`Don't simply click OK!
+            \nPlease fully read this alert for better usage.
+            \n\n\nElective subjects are followed by mandatory subjects.
+            \nExample, if you are in semester 4 and clicking CTS and EVS for OE and LA and TOC for MSC, CTS and EVS will come after OS, not BEEE.
+            \nDon't get confused that CTS is not included.`);
+            getSelections(
+                (s==3)?electives.slice(0,1):((s==4)?electives.slice(0,2):
+                ((s==5)?electives.slice(0,3):((s==6)?electives.slice(0,5):
+                ((s==7)?electives.slice(0,8):electives))))
+            );
         }
     }
 }
