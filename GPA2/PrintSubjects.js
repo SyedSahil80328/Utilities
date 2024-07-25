@@ -203,7 +203,7 @@ async function getSemester(d) {
 
         case 7:
             additional = empty.concat(semesters["semester7"]);
-            getSelections(electives.slice(5,8));
+            getSelections(electives.slice(5));
             break;
 
         case 8:
