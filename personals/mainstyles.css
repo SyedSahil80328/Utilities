@@ -1,0 +1,361 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Exo 2", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    font-size: 20px;
+    background-color: #121212; /* Dark background */
+    color: #fff;
+}
+.topper {
+    font-family: monospace;
+    transition: all 0.5s ease;
+    background-color: #1abc9c;
+}
+.topper:hover {
+    color: #0099cc;
+}
+.myapp {
+    font-family: "Playwrite DE Grund", cursive;
+}
+h2 {
+    font-size: xx-large;
+    font-family: "Ga Maamli";
+    text-transform: uppercase;
+}
+h3 {
+    font-family: "Graduate", Arial, sans-serif;
+    font-size: x-large;
+    text-transform: uppercase;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    padding: 0 1em;
+    position: sticky;
+    align-items: center;
+    top: 0;
+    z-index: 1000;
+}
+nav a {
+    color: #fff;
+    padding: 1em;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #575757;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1em;
+    z-index: 2; /* Ensure the hamburger is on top */
+}
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-9px, -6px);
+}
+.nav-links {
+    display: flex;
+    gap: 1em;
+}
+.container {
+    padding: 1em;
+}
+.section {
+    padding: 3em 0;
+}
+.aboutme-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2em; /* Maintain gap between photo and content */
+}
+.profile-img-wrapper {
+    position: relative;
+    width: 350px;
+    height: auto;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: linear-gradient(to bottom, #0099cc, #000);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    position: relative;
+    z-index: 1;
+}
+.profile-img-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 20px;
+    background: rgba(0, 153, 204, 0.7);
+    box-shadow: 0 0 20px rgba(0, 153, 204, 0.7);
+    z-index: 0;
+}
+.aboutme-text {
+    flex: 1;
+}
+.aboutme-text div {
+    font-size: 2.5em;
+    font-family: 'Playwrite DE Grund';
+    text-transform: uppercase;
+}
+.aboutme-text .subtitle {
+    font-size: 1.5em;
+    color: #ccc;
+}
+.project, .experience, .education, .skills {
+    background: #000;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 5px;
+    color: #fff;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+.skill {
+    margin: 10px 0;
+}
+.skill-name {
+    margin-bottom: 5px;
+}
+.progress-bar {
+    background-color: #34495e;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.progress-bar div {
+    height: 20px;
+    background-color: #3498db;
+    text-align: right;
+    padding-right: 5px;
+    line-height: 20px;
+    color: #fff;
+    border-radius: 10px 0 0 10px;
+}
+.project, .skills, .education {
+    background: #9b59b6;
+    color: white;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    max-height: 50px;
+    position: relative;
+}
+.project:hover, .skills:hover, .education:hover {
+    background-color: #a52a2a;
+    transform: translateY(-5px);
+}
+.project.expanded, .skills.expanded, .education.expanded {
+    max-height: 5000px; /* Adjust based on content */
+}
+.project h3, .skills h3, .education h3 {
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+}
+.project .content, .skills .skill, .education .grid-container {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+.project.expanded .content, .skills.expanded .skill, .education.expanded .grid-container {
+    opacity: 1;
+}
+.toggle-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.progress-bar2 {
+    background-color: #34495e;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    height: 10px;
+    margin-bottom: 10px;
+}
+.progress {
+    height: 10px;
+}
+.blue {
+    background-color: #3498db;
+}
+.orange {
+    background-color: #e67e22;
+}
+.green {
+    background-color: #2ecc71;
+}
+.red {
+    background-color: #e74c3c;
+}
+.purple {
+    background-color: #9b59b6;
+    color: #fff;
+}
+.yellow {
+    background-color: #f1c40f;
+}
+.teal {
+    background-color: #1abc9c;
+}
+.pink {
+    background-color: #ff69b4;
+}
+.brown {
+    background-color: #a52a2a;
+    color: #fff;
+}
+.gray {
+    background-color: #95a5a6;
+}
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+.legend-text {
+    font-size: 14px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+.tile {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+.tile:hover {
+    box-shadow: 0 0 20px 10px rgba(0, 153, 204, 0.7), 0 0 30px 20px rgba(0, 153, 204, 0.5);
+    background-color: black;
+    transform: scale(1.05); /* Slightly scale up the tile for a more dynamic effect */
+}
+.tile img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+.tile div {
+    height: 100px;
+    font-size: 28px;
+    font-weight: bolder;
+    font-family: cursive;
+    border-radius: 3%;
+    background-color: #fff;
+    color: #000;
+}
+.tile h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    vertical-align: bottom;
+}
+a {
+    color: #3498db
+}
+.contacts {
+    display: flex;
+    gap: 30px;
+    justify-content: space-evenly;
+}
+.elements {
+    text-decoration: none;
+}
+.fab {
+    font-size: 25px;
+    margin-right: 10px;
+}
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+    .nav-links a {
+        padding: 1em;
+        text-align: center;
+        border-top: 1px solid #575757;
+    }
+    .nav-links a:first-child {
+        border-top: none;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .aboutme-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img-wrapper {
+        margin: 0 0 1em 0;
+    }
+    .contacts {
+        display: block;
+    }
+    .elements {
+        margin-bottom: 10px;
+    }
+}

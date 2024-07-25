@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="mainstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <div class="container">
+        <section id="aboutme" class="section">
+            <h2>About Me</h2>
+            <div class="aboutme-content">
+                <div class="profile-img-wrapper">
+                    <img src="profile-photo.png" alt="Syed Sahil A" class="profile-img">
+                </div>
+                <div class="aboutme-text">
+                    <p class="subtitle">Hello, It's Me</p>
+                    <h1>Syed Sahil A</h1>
+                    <p class="subtitle">And I'm an Engineering Student </p>
+                    <p>I am a passionate, hardworking, and enthusiastic undergraduate engineering student from Tamil Nadu, currently studying at the Madras Institute of Technology, Anna University. I am dedicated to excelling in my field and continuously expanding my knowledge and skills.</p>
+                    <p>I thrive in collaborative environments and enjoy working with my peers, believing that teamwork is essential for innovation and success. My hands-on approach to learning and problem-solving has equipped me with practical skills and the ability to adapt to new challenges quickly.</p>
+                    <p>I am always open to new opportunities and experiences that allow me to grow both personally and professionally. With a passion for technology and a drive to make a positive impact, I am looking forward to contributing to innovative projects in the software engineering field.</p>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Integrated Assistive System for Object Detection and Blind Navigation <span class="toggle-button">+</span></h3>
+                <div class="content">
+                    <p>Empowering independence through technology: Explore our integrated assistive system combining advanced object detection and blind navigation, designed to enhance accessibility for individuals with visual impairments. Navigating the world with confidence and precision. </p>
+                    <p>This comprehensive solution seamlessly combines cutting-edge object detection capabilities and intelligent blind navigation technologies. Empower individuals with visual impairments to navigate their surroundings confidently, fostering a more inclusive and connected world.</p>
+                    <h3>Technologies Used</h3>
+                    <h4>Programming Languages</h4>
+                    <div class="progress-bar2">
+                        <div class="progress blue" style="width: 97.1%;"></div>
+                        <div class="progress orange" style="width: 2.9%;"></div>
+                    </div>
+                    <div class="legend">
+                        <div class="legend-item">
+                            <div class="legend-color blue"></div>
+                            <div class="legend-text">PYTHON 97.1%</div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color orange"></div>
+                            <div class="legend-text">SHELL 2.9%</div>
+                        </div>
+                    </div>
+                    <h4>Hardware Tools</h4>
+                    <div class="grid-container">
+                        <div class="tile blue">
+                            <img src="https://in.element14.com/productimages/large/en_GB/3051885-40.jpg" alt="Raspberry PI Computer">
+                            <h4>Raspberry PI Computer</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+
+            hamburger.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        });
+
+    </script>
+</body>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 0 1em;
+}
+
+nav a {
+    color: white;
+    padding: 1em;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1em;
+    z-index: 2; /* Ensure the hamburger is on top */
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-9px, -6px);
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 1em;
+}
+
+.container {
+    padding: 1em;
+}
+
+.section {
+    margin-bottom: 1em;
+}
+
+.aboutme-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2em; /* Maintain gap between photo and content */
+}
+
+.profile-img-wrapper {
+    position: relative;
+    width: 400px;
+    height: auto;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: linear-gradient(to bottom, #0099cc, #000);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    position: relative;
+    z-index: 1;
+}
+
+.profile-img-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 20px;
+    background: rgba(0, 153, 204, 0.7);
+    box-shadow: 0 0 20px rgba(0, 153, 204, 0.7);
+    z-index: 0;
+}
+
+.aboutme-text {
+    flex: 1;
+}
+
+.aboutme-text h1 {
+    font-size: 2.5em;
+}
+
+.aboutme-text .subtitle {
+    font-size: 1.5em;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav-links a {
+        padding: 1em;
+        text-align: center;
+        border-top: 1px solid #575757;
+    }
+
+    .nav-links a:first-child {
+        border-top: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .aboutme-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img-wrapper {
+        margin: 0 0 1em 0;
+    }
+}
+
+.project .toggle-button {
+    cursor: pointer;
+}
+
+.project .content {
+    display: none;
+}
+
+.project .toggle-button.active + .content {
+    display: block;
+}
+
+</style>
+</html>
