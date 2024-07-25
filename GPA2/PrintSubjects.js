@@ -208,7 +208,12 @@ async function getSemester(d) {
 
         case 8:
             additional = empty.concat(semesters["semester8"]);
-            getSelections(electives.slice(8));
+            skeleton = setDivElements(additional);
+            skeleton = skeleton + "<p style='text-align: center;'><button onclick='calculate();' class='climax-button'><span class='white'> --> </span>CALCULATE<span class='white'> <-- </span></button></p>";
+            await sleep(500);
+            document.getElementById('sem-results').innerHTML = skeleton;
+            document.getElementById('sem-results').style.width = myWidth;
+            myEventListener();
             break;
     }
     else {
@@ -235,8 +240,7 @@ async function getSemester(d) {
             \nDon't get confused that CTS is not included.`);
             getSelections(
                 (s==3)?electives.slice(0,1):((s==4)?electives.slice(0,2):
-                ((s==5)?electives.slice(0,3):((s==6)?electives.slice(0,5):
-                ((s==7)?electives.slice(0,8):electives))))
+                ((s==5)?electives.slice(0,3):((s==6)?electives.slice(0,5):electives)))
             );
         }
     }
