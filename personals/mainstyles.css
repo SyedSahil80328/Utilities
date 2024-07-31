@@ -96,7 +96,7 @@ nav a:hover {
 }
 .profile-img-wrapper {
     position: relative;
-    width: 350px;
+    width: 300px;
     height: auto;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     background: linear-gradient(to bottom, #0099cc, #000);
@@ -324,9 +324,6 @@ a {
     margin-right: 10px;
 }
 @media (max-width: 768px) {
-    .container {
-        padding: 0;
-    }
     .hamburger {
         display: flex;
     }
