@@ -1,58 +1,6 @@
-window.addEventListener('resize', function() {
-    var currentViewportWidth = window.innerWidth;
-
-    if (currentViewportWidth !== initialViewportWidth) {
-        // Viewport width has changed, do something here
-
-        // Update the initialViewportWidth for the next comparison
-        initialViewportWidth = currentViewportWidth;
-    }
-    widthCheck();
-});
-
 function sleep (ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-
-async function showMenu(val) {
-    s = document.getElementById("my-body");
-    t = document.getElementById("menu-contents");
-    document.getElementById("menu-button").innerHTML = `<i class='fas fa-times' onclick='hideMenu(${val});'></i>`;
-    if (val*1 == 2 && answered == 0)
-        document.getElementById('lateral-checker').style.display = "none";
-
-    s.classList.remove('before-click');
-    s.classList.add('after-click');
-
-    t.style.display = "block";
-    await sleep (10);
-    if (initialViewportWidth <= 950)
-        s.style.display = 'none';
-
-    t.classList.remove('button-unclicked');
-    t.classList.add('button-clicked');
-}
-
-async function hideMenu(val) {
-    s = document.getElementById("my-body");
-    t = document.getElementById("menu-contents");
-    document.getElementById("menu-button").innerHTML = `<i class='fas fa-bars' onclick='showMenu(${val});'></i>`;
-
-    t.classList.remove('button-clicked');
-    t.classList.add('button-unclicked');
-    
-    await sleep(200);
-    t.style.display = "none";
-    if (val*1 == 2 && answered == 0)
-        document.getElementById('lateral-checker').style.display = "block";
-
-    s.classList.remove('after-click');
-    s.classList.add('before-click');
-
-    if (initialViewportWidth <= 950 && answered == 1) 
-        s.style.display = 'block';
-}
-
 function checkIfLateral(val) {
     var actVal = val*1;
     answered = 1;
