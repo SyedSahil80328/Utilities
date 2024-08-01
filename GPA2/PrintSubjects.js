@@ -178,6 +178,7 @@ async function getSemester(d) {
             await sleep(500);
             document.getElementById('sem-results').innerHTML = skeleton;
             document.getElementById('sem-results').style.width = myWidth;
+            document.getElementById('sem-results').style.border = "#2196F3 solid";
             myEventListener();
             break;
         
@@ -203,7 +204,7 @@ async function getSemester(d) {
 
         case 7:
             additional = empty.concat(semesters["semester7"]);
-            getSelections(electives.slice(5));
+            getSelections(electives.slice(3));
             break;
 
         case 8:
@@ -213,6 +214,7 @@ async function getSemester(d) {
             await sleep(500);
             document.getElementById('sem-results').innerHTML = skeleton;
             document.getElementById('sem-results').style.width = myWidth;
+            document.getElementById('sem-results').style.border = "#2196F3 solid";
             myEventListener();
             break;
     }
