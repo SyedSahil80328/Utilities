@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="mainstyles.css">
+    <link rel="stylesheet" href="../sidemenu/navbar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -25,8 +26,8 @@
             <a href="#hobbies">Hobbies</a>
             <a href="#contact">Contact</a>
             <a href="#aboutme" class="topper" title="Move to top">|:`_`:|</a>
-            <a href="https://syedsahil80328.github.io/Utilities/GPA2/calc.html" target="_blank" class="myapp">GPA Calc</a>
-            <a href="https://syedsahil80328.github.io/Utilities/GPA2/cgpa.html" target="_blank" class="myapp">CGPA Calc</a>
+            <a href="../GPA2/calc.html" target="_blank" class="myapp">GPA Calc</a>
+            <a href="../GPA2/cgpa.html" target="_blank" class="myapp">CGPA Calc</a>
             <a href="https://annauniv0-my.sharepoint.com/:b:/g/personal/2021503053_student_annauniv_edu/EUGocuMO_4ROh5RglhctRXQB1GCr3CaPqXxNkPvpxZ9Exg?e=VQ2840" target="_blank" class="myapp">My Resume</a>
         </div>
     </nav>
@@ -381,25 +382,10 @@
                 }
             });
         });
-        document.addEventListener('DOMContentLoaded', function () {
-            const hamburger = document.getElementById('hamburger');
-            const navLinks = document.getElementById('nav-links');
-            const navLinksChildren = navLinks.querySelectorAll('a');
-
-            function toggleMenu() {
-                navLinks.classList.toggle('active');
-                hamburger.classList.toggle('active');
-            }
-
-            hamburger.addEventListener('click', toggleMenu);
-
-            navLinksChildren.forEach(link => {
-                link.addEventListener('click', toggleMenu);
-            });
-        });
     </script>
     <footer>
         <p>&copy; 2024 Syed Sahil</p>
     </footer>
+    <script src="../sidemenu/navbar.js"></script>
 </body>
 </html>
