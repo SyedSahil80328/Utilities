@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../sidemenu/navbar.css">
     <link rel="stylesheet" href="mystyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Playwrite+DE+Grund:wght@100..400&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Graduate&display=swap" rel="stylesheet">
     <title>Calc for BE students</title>
 </head>
 <style>
@@ -31,34 +35,32 @@
 
     function widthCheck () {
         if (initialViewportWidth < 950) {
-            this.document.getElementById('final-result').style.width = "85%";
             myWidth = "90%";
         } else {
-            this.document.getElementById('final-result').style.width = "90%";
             myWidth = "100%";
         }
     }
 </script>
 <body onload="isMobile(); widthCheck();">
+    <nav>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="../personals/portfolio.html" target="_blank">About Me</a>
+            <a href="calc.html" target="_blank">GPA Calc</a>
+            <a href="../timer/timer.html" target="_blank">Timer</a>
+        </div>
+    </nav>
     <div class="body">
-        <div id="menu-button">
-            <i class="fas fa-bars" onclick="showMenu(2);"></i>
-        </div>
-        <div id="menu-contents" class="button-unclicked">
-            <a href="index.html" target="_blank">Home</a>
-            <hr><br>
-            <a href="https://syedsahil80328.github.io/Utilities/personals/portfolio.html" target="_blank">About Me</a>
-            <hr><br>
-            <a href="https://syedsahil80328.github.io/Utilities/GPA2/calc.html" target="_blank">GPA calc</a>
-            <hr><br>
-            <a href="#">CGPA calc</a>
-        </div>
         <div id="lateral-checker">
             <p>Are you a lateral entry student?</p>
             <p style='padding-left: 3%;'><button onclick='checkIfLateral(1);' class='climax-button'><span class='white'> --> </span><u><i>Yes! I do</i></u><span class='white'> <-- </span></button></p>
             <p style='padding-left: 3%;'><button onclick='checkIfLateral(2);' class='climax-button'><span class='white'> --> </span><u><i>No! I'm a regular one</i></u><span class='white'> <-- </span></button></p>
         </div>
-        <div id="my-body" class="before-click">
+        <div id="my-body">
             <h1>CUMULATIVE GRADE POINT AVERAGE CALCULATOR</h1>
             <p>This is a simple grade calculator that takes your grades and process them to extract your CGPA.</p>
             <p>You can try our GPA calculator as well to calculate your GPA.</p>
@@ -84,6 +86,5 @@
 <script src="GradeControl.js"></script>
 <script src="PrintSubjects.js"></script>
 <script src="DatasetAndFinalCalc.js"></script>
-</html>
-</body>
+<script src="../sidemenu/navbar.js"></script>
 </html>
