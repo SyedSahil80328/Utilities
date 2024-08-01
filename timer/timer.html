@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../sidemenu/navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap&family=Ga+Maamli&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="../personals/portfolio.html" target="_blank">About Me</a>
+            <a href="../GPA2/calc.html" target="_blank">GPA Calc</a>
+            <a href="../GPA2/cgpa.html" target="_blank">CGPA Calc</a>
+        </div>
+    </nav>
+    <h1>TIMER</h1>
+    <div class="container">
+        <div class="element">
+            <div class="inner">
+                <h2>HOURS</h2>
+                <div class="times" id="hours">
+                    00
+                </div>
+                <div id="appear_hours">
+                    <button class="up" onclick="incHours();"><i class="fas fa-arrow-up"></i></button>
+                    <button class="down" onclick="decHours();"><i class="fas fa-arrow-down"></i></button>
+                </div>
+            </div>
+            <div id="resetHours" class="element">
+                <button onclick='RESETHR();' class="normal-button">RESET HOURS</button>
+            </div>
+        </div>
+        <div class="element">
+            <div class="inner">
+                <H2>MINUTES</H2>
+                <div class="times" id="minutes">
+                    00
+                </div>
+                <div id="appear_minutes">
+                    <button class="up" onclick="incMinutes();"><i class="fas fa-arrow-up"></i></button>
+                    <button class="down" onclick="decMinutes();"><i class="fas fa-arrow-down"></i></button>
+                </div>
+            </div>
+            <div id="resetMinutes" class="element">
+                <button onclick='RESETMN();' class="normal-button">RESET MINUTES</button>
+            </div>
+        </div>
+        <div class="element">
+            <div class="inner">
+                <H2>SECONDS</H2>
+                <div class="times" id="seconds">
+                    00
+                </div>
+                <div id="appear_seconds">
+                    <button class="up" onclick="incSeconds();"><i class="fas fa-arrow-up"></i></button>
+                    <button class="down" onclick="decSeconds();"><i class="fas fa-arrow-down"></i></button>
+                </div>
+            </div>
+            <div id="resetSeconds" class="element">
+                <button onclick='RESETSC();' class="normal-button">RESET SECONDS</button>
+            </div>
+        </div>
+    </div>
+    <section id="controls" class="container2">
+        <div id="continue" class="element">
+            <button onclick='PAUSE();' class="normal-button">PAUSE</button>
+        </div>
+        <p id="the_end" class="aligner element">
+            <button onclick="stop_playing();" class="normal-button">Close and SET TIME</button>
+        </p>
+        <div id="stop" class="element">
+            <button onclick='STOP();' class="normal-button">STOP</button>
+        </div>
+    </section> 
+    <p id="starter" class="aligner">
+        <button onclick="startTimer();" class="normal-button">START</button>
+    </p>
+    <audio controls id="alarm" preload="auto">
+        <source src="TheFatRat Mashup Super Extended.mp3" type="audio/mpeg">
+    </audio>
+</body>
+<script src="control_time.js"></script>
+<script src="main_counter.js"></script>
+<script src="reset_all.js"></script>
+<script src="../sidemenu/navbar.js"></script>
+</html>

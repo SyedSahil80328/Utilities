@@ -1,0 +1,99 @@
+body {
+    font-size: 20px;
+    font-family: "Space Mono", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container, .container2 {
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.element {
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+}
+button {
+    font-size: 20px;
+    cursor: pointer;
+}
+button.normal-button {
+    border-radius: 10px;
+    font-family: "Ga Maamli", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    background: none;
+    border: 2px solid red;
+    font-size: 30px;
+    padding: 5px;
+    transition: all 0.35s ease;
+}
+button.normal-button:hover {
+    transform: scale(1.1);
+    border: 2px solid green;
+    box-shadow: 0 0 10px 5px rgb(154, 207, 154), 0 0 15px 10px rgb(16, 95, 16);
+}
+button.up, button.down {
+    background: none;
+    border: none; 
+}
+p.aligner {
+    text-align: center;
+}
+.times {
+    font-size: 50px;
+}
+audio {
+    display: none;
+}
+#resetHours, #resetMinutes, #resetSeconds {
+    display: none;
+}
+#continue, #stop, #the_end {
+    display: none;
+}
+h1 {
+    text-align: center; 
+    font-size: 50px;
+    font-family: "Ga Maamli", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.inner {
+    border: 2px solid red;
+    border-radius: 20px;
+    height: 250px;
+    margin-bottom: 30px;
+    transition: all 0.35s ease;
+}
+
+.inner:hover {
+    transform: scale(1.05);
+    border: 2px solid green;
+}
+.up, .down {
+    transition: all 0.5s ease;
+    height: 50px;
+    vertical-align: top;
+    border-radius: 10px;
+}
+.up:hover {
+    background-color: green;
+    color: lightgreen;
+    transform: translateY(-10px);
+}
+.down:hover {
+    background-color: red;
+    color: lightcoral;
+    transform: translateY(10px);
+}
+@media (max-width: 768px) {
+    .container {
+        display: block;
+    }
+    .inner:hover {
+        transform: none;
+    }
+}
+@media (max-width: 400px) {
+    .container2 {
+        display: block;
+    }
+}
