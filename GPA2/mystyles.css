@@ -1,92 +1,35 @@
-#menu-button {
-    top: 40px;
-    left: 60px;
-    position: fixed;
-}
-
-#menu-contents {
-    top: 70px;
-    left: 50px;
-    position: fixed;
-    font-family: cursive;
-    text-align: center;
-    min-height: 85vh;
-}
-
 a {
     color: black;
     text-decoration: none;
 }
-
 body {
+    font-family: "Exo 2", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #2196F3;
+    font-size: 20px;
     padding: 15px;
 }
-
 div.body {
-    font-family: Cascadia Mono, Segoe UI, monospace;
-    font-size: 20px;
     padding: 25px;
-    max-width: 95%;
     border-radius: 10px;
     min-height: 100vh;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
 }
-
-#my-body {
-    padding: 25px;
-}
-
 html {
     scroll-behavior: smooth;
 }
-
-.before-click {
-    width: 100%;
-    margin-left: auto;
-    margin-right: 0;
-    transition: all 0.5s ease;
-}
-
-.after-click {
-    transition: all 0.5s ease;
-    width: 80%;
-    margin-left: auto;
-    opacity: 50%;
-    margin-right: 0;
-}
-
-.button-unclicked {
-    width: 0;
-    display: none;
-    transition: all 0.5s ease;
-}
-
-.button-clicked {
-    width: 15%;
-    display: block;
-    border: solid #2196F3;
-    border-left: none;
-    padding: 10px;
-    border-radius: 20px;
-    transition: all 0.5s ease;
-}
-
 h1 {
     color: #2196F3;
     text-align: center;
     font-size: 35px;
 }
-
 .container {
     display: flex; 
     width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
-
 .element {
     flex: auto; 
     padding: 4%;
@@ -94,25 +37,20 @@ h1 {
     margin-right: auto;
     text-align: center;
 }
-
 .selection {
     text-align: center; 
     width: 100%;
     transition: all 0.5s ease;
 }
-
 .selected {
     text-align: center; 
     width: 35%;
     transition: all 0.5s ease;
 }
-
-#sem-results {width: 0%;}
-
 .grade-style {
     border: 10px solid #2196F3;
     color: white;
-    font-family: Agency FB, monospace;
+    font-family: "Exo 2", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 60px;
     text-align: center;
     border-radius: 20px;
@@ -121,115 +59,100 @@ h1 {
     margin-left: auto;
     margin-right: auto;
 }
-
 .grade-O {
     background-color: #1aff1a;
     color: #094e86;
     transition: all 0.5s ease;
 }
-
 .grade-Ap {
     background-color: #33cc33;
     color: #094e86;
     transition: all 0.5s ease;
 }
-
 .grade-A {
     background-color: #66ff66;
     transition: all 0.5s ease;
     color: #094e86;
 }
-
 .grade-Bp {
     background-color: yellow;
     color: black;
     transition: all 0.5s ease;
 }
-
 .grade-B {
     background-color: orange;
     color: black;
     transition: all 0.5s ease;
 }
-
 .grade-C {
     background-color: #ff9999;
     color: white;
     transition: all 0.5s ease;
 }
-
 .grade-RA {
     background-color: #ff5050;
     color: white;
     transition: all 0.5s ease;
 }
-
 button {
     background-color: white;
     font-size: 20px;
-    font-family: Cascadia Mono, monospace;
+    font-family: "Exo 2", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border: none;
 }
-
 .up-unclicked, .down-unclicked {
     transition: all 0.5s ease; 
     height: 40px; 
     vertical-align: top; 
     border-radius: 10px;
 }
-
 .up-unclicked:hover {
     background-color: green; 
     color: lightgreen; 
     transform: translateY(-10px);
 }
-
 .down-unclicked:hover {
     background-color: red; 
     color: lightcoral; 
     transform: translateY(10px);
 }
-
 .ok-unclicked {
     border-radius: 10px;
     transition: all 0.5s ease;
     height: 50px;
-}
-  
+} 
 .ok-unclicked:hover {
     transform: translateX(10px);
     background-color: chocolate;
     color: white;
 }
-
-.count::before {content: "0";}
+.count::before {
+    content: "0";
+}
 .count {
     font-size: 60px;
-    font-family: Agency FB;
+    font-family: "Exo 2", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
     background-color: black;
     border: 5px solid yellow;
     border-radius: 20px;
     width: 75px;
-    font-weight: 800;
     height: 75px;
+    font-weight: 800;
     margin-left: auto;
     margin-right: auto;
 }
-
 .custom-checkbox {
     position: relative;
     padding-left: 30px;
     cursor: pointer;
     transition: all 0.1s ease;
 }
-
 .custom-checkbox input[type="checkbox"] {
     opacity: 0;
     position: absolute;
     cursor: pointer;
 }
-
 .checkmark {
     position: absolute;
     top: 0;
@@ -240,31 +163,25 @@ button {
     border-radius: 3px;
     transition: background-color 0.3s ease;
 }
-
 .custom-checkbox:hover {
     border: #ccc solid;
     border-radius: 10px;
     color: #2196F3;
 }
-
 .custom-checkbox:hover .checkmark {
     background-color: #ccc;
 }
-
 .custom-checkbox input[type="checkbox"]:checked ~ .checkmark {
     background-color: #2196F3;
 }
-
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
-
 .custom-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
     display: block;
 }
-
 .custom-checkbox .checkmark:after {
     left: 6px;
     top: 2px;
@@ -274,75 +191,56 @@ button {
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
 }
-
 h2 {
     text-align: center;
 }
-
 #sem-results {
     border-radius: 25px;
+    width: 0%;
 }
-
 .white {
     white-space: pre-wrap; 
     color: white;
 }
-
 .climax-button {
     transition: all 0.5s ease;
     border-radius: 20px;
     height: 50px;
-    font-family: Cascadia Mono, monospace;
+    font-family: "Exo 2", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
 }
-
 .climax-button:hover {
     background-color: #2196F3;
     color: white;
     transform: translateY(5px);
 }
-
-@media (max-width: 950px) {
+@media (max-width: 768px) {
     h1 {
         border: #2196F3 solid;
         border-radius: 20px;
         border-top: none;
     }
-
-    div.body {
-        max-width: 100%;
-    }
-
-    #my-body {
-        padding: 10px;
-    }
-
     .button-clicked {
         width: 50%;
         text-align: left;
     }
-
     .container {
         display: block;
         width: 100%;
     }
-
     .selected, #sem-results {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
-
     .custom-checkbox:hover {
         border: none;
         color: #2196F3;
     }
-
     .checkmark {
         height: 25px;
         width: 25px;
     }
-
     .custom-checkbox .checkmark:after {
         left: 8px; /* Adjusted position */
         top: 4px; /* Adjusted position */
@@ -352,46 +250,37 @@ h2 {
         border-width: 0 3px 3px 0;
         transform: rotate(45deg);
     }
-
     .white {
         font-size: 0px;
     }
-
     .slider {
         /* aspect-ratio: 1 / 1; */
         height: fit-content;
         position: relative;
     }
-
     .slider-container {
         padding: 5px;
     }
-
     #messenger {
         min-height: 90px;
     }
 }
-
 .whitespace {
     white-space: pre-wrap;
 }
-
 input[type="number"] {
-    font-family: Cascadia Mono, monospace;
+    font-family: "Exo 2", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
     width: 80px;
 }
-
 .slider-container {
 	padding: 1rem;
 }
-
 .slider-wrapper {
 	position: relative;
 	max-width: 500px;
 	margin: 0 auto;
 }
-
 .slider {
 	display: flex;
 	/* aspect-ratio: 16 / 9; */
@@ -403,26 +292,21 @@ input[type="number"] {
 	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
 	scrollbar-width: none; /* Hide scrollbar Firefox */
 }
-
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 .slider::-webkit-scrollbar {
 	display: none;
 }
-
 .slider div {
 	flex: 1 0 100%;
 	scroll-snap-align: start;
 	object-fit: cover;
 }
-
 #messenger {
     padding: 5px;
     text-align: center;
     min-height: 45px;
     vertical-align: middle;
 }
-
 .progressive-bar {
     background-color: orange;
     height: 5px;
@@ -430,7 +314,6 @@ input[type="number"] {
     margin-top: 25px;
     border-radius: 5px;
 }
-
 #final-result {
     text-align: center;
     background-color: red;
@@ -438,5 +321,4 @@ input[type="number"] {
     color: white;
     padding: 20px;
     display: none;
-    width: 95%;
 }
