@@ -169,7 +169,7 @@ footer {
     margin-left: 20px;
 }
 .education p span::before {
-    content: "-> ";
+    content: ">_ ";
 }
 .toggle-button {
     position: absolute;
@@ -255,14 +255,16 @@ a {
 }
 .contacts {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 .elements {
     text-decoration: none;
-    flex: 1 0 calc(10% - 10px); /* Flex-grow: 1, Flex-shrink: 0, Flex-basis: 10% of the row minus gaps */
-    max-width: calc(10% - 10px); /* Ensures no more than 10 boxes per row */
+    color: black;
+    background-color: #b9faf8;
+    padding: 10px;
+    border-radius: 15px;
 }
 .details {
     text-decoration: none;
@@ -284,11 +286,11 @@ a {
         display: block;
     }
     .elements {
-        margin-bottom: 10px;
-        max-width: 100%;
+        background: none;
+        color: white;
     }
     .elements::before {
-        content: "-> "
+        content: ">_ ";
     }
 
 }
