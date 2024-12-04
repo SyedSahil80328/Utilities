@@ -29,6 +29,7 @@ var subjects = {
     CS6106: [6,"Database Management Systems"],
     CS6107: [5,"Computer Architecture"],
     CS6108: [6,"Operating Systems"],
+    NM6001: [2, "Naan Mudhalvan I"],
 
     //SEMESTER 4 & 5
     MA6201: [5,"Linear Algebra"],
@@ -40,6 +41,7 @@ var subjects = {
     CS6109: [6,"Compiler Design"],
     CS6110: [6,"Object Oriented Analysis and Design"],
     CS6111: [6,"Computer Networks"],
+    NM6002: [2,"Naan Mudhalvan II"],
 
     //SEMESTER 5 & 6
     CS6301: [6,"Machine Learning"],
@@ -100,8 +102,8 @@ var semesters = {
     "semester1": ["HS6151","PH6151","MA6151","CS6101","CS6102"],
     "semester2": ["HS6251","CY6251","MA6251","GE6251","CS6103"],
     "semester3": ["CS6104","CS6105","MA6351","EE6351"],
-    "semester4": ["CS6106","CS6107","CS6108"],
-    "semester5": ["CS6109","CS6110","CS6111"],
+    "semester4": ["CS6106","CS6107","CS6108","NM6001"],
+    "semester5": ["CS6109","CS6110","CS6111","NM6002"],
     "semester6": ["CS6611"],
     "semester7": [],
     "semester8": ["CS6811"]
