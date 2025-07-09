@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="mainstyles.css">
+    <link rel="stylesheet" href="color.css">
     <link rel="stylesheet" href="../sidemenu/navbar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,35 +31,55 @@
         <section id="aboutme" class="section">
             <h2>About Me</h2>
             <div class="aboutme-content justifier">
-                <div class="profile-img-wrapper">
-                    <img src="profile-photo.png" alt="Syed Sahil A" class="profile-img">
-                </div>
                 <div class="aboutme-text">
                     <p class="subtitle">Hello, It's Me</p>
                     <div>Syed Sahil A</div>
                     <p class="subtitle">And I'm an Engineering Student </p>
-                    <p>I'm currently doing my Bachelors of Engineering, majoring in Computer Science Stream at Madras Institute of Technology, Anna University. I have maintained an overall CGPA of 9.18 in my current education.</p>
-                    <p>I'm passionate in web development (Front end, Back end and Full Stack). I have experience in web development as a Freelancer and developed a pile of projects. I have expertise in local server deployment with XAMPP, optimising application deployment with the help of Docker and Kubernetes, followed Object Oriented Concepts and included secured authentication in my projects.</p>
-                    <p>I also did a project funded by Center for Sponsored Research and Consultancy, Anna University which helps the visually challenged community walk confidently in outdoors. </p>
-                    <p>I'm interested in doing coding, cycling at weekends and helping others. I love working as a team and conquer in projects and initiatives. </p>
+                </div>
+                <div class="aboutme-text">
+                    <p>I am a Computer Science graduate with a strong foundation in both software and hardware systems. My academic journey has been complemented by practical experiences, especially in iOS app development, time series machine learning, and assistive technologies.</p>
+                    <p>I enjoy working with Swift, Java, C++, and Python, and I’m comfortable applying object-oriented programming concepts to solve real-world problems. My foundation in core data structures and algorithms enables me to write efficient, maintainable code, and I apply these skills across mobile apps, backend systems, and hardware-software integrations.</p>
+                    <p>During my internships, I contributed to impactful projects like <strong>Norton VPN</strong> and <strong>SafeSocial</strong> at Gen Digital, and <strong>NavAid</strong> at Anna University. These roles sharpened my skills in UI development, database migration, unit testing, and deploying real-time assistive solutions on platforms like Raspberry Pi.</p>
+                    <p>I bring a communicative and problem-solving mindset to every project, whether in a team or working independently, aiming to build practical, user-centered solutions using clean design patterns and thorough testing practices.</p>
                 </div>
             </div>
         </section>
         <section id="experiences" class="section">
             <h2>Work Experiences</h2>
             <div class="experience justifier">
-                <h3>Web Development Freelancing <span class="toggle-button">+</span></h3>
+                <h3>GEN (01/2025 - 07/2025) <span class="toggle-button">see more</span></h3>
                 <div class="content">
-                    <p>As a freelance web developer, I successfully developed and delivered a functional website for the Capital Educational and Charitable Trust.</p>
-                    <p>The project involved utilizing a range of web technologies, including HTML, CSS, JavaScript, and PHP, to ensure a robust and user-friendly site.</p>
-                    <p>I employed VS Code for coding and XAMPP for local server management, enabling efficient development and testing. The final product met the client's needs and provided a strong online presence for the trust.</p>                
+                    <p><strong>Employer Name:</strong> Gen Digital Inc. (formerly Symantec and NortonLifeLock)</p>
+                    <p>As a software engineering intern on the mobile development team, I worked on key features of the Norton VPN product and contributed to SafeSocial’s backend optimization.</p>
+                    <p>My responsibilities included refactoring iOS code, designing UI components, and writing unit tests with 90% coverage to support product release stability and reliability.</p>
+                    <p>I also led a backend migration task, transitioning SafeSocial’s data from PostgreSQL to DynamoDB, which improved query latency by 35% for large datasets.</p>
+                    <p><strong>Technologies:</strong> Swift, UIKit, SwiftUI, MVVM, MVVM-C, XCTest, Xcode</p>
+                </div>
+            </div>
+            <div class="experience justifier">
+                <h3>AUN (10/2023 - 03/2024) <span class="toggle-button">see more</span></h3>
+                <div class="content">
+                    <p><strong>Employer Name:</strong> Centre for Sponsored Research and Consultancy, Anna University</p>
+                    <p>As a fellowship intern and team vice leader, I collaborated on the implementation, configuration, and documentation of an assistive navigation system aimed at helping the visually impaired.</p>
+                    <p>We built <strong>NavAid</strong>, a real-time voice-guided system capable of detecting 91 object classes with 98.63% accuracy. I was involved in hardware procurement, Raspberry Pi setup, and peripheral integration.</p>
+                    <p>The project featured dual-mode navigation using GPS and an offline fallback powered by LangChain. I also contributed to the documentation process, capturing development and workflow stages with technical figures.</p>
+                    <p><strong>Technologies:</strong> Python, OpenCV, Raspberry Pi, YOLO, Haar Cascades, LangChain, pyttsx3</p>
+                </div>
+            </div>
+            <div class="experience justifier">
+                <h3>CAC (06/2023 - 08/2023) <span class="toggle-button">see more</span></h3>
+                <div class="content">
+                    <p><strong>Employer Name:</strong> Capital Educational and Charitable Trust</p>
+                    <p>As a freelancer and team lead, I led the implementation of a full-stack application for the trust, focusing on both front-end and back-end development.</p>
+                    <p>I designed and developed a responsive website tailored to the trust’s informational and usability needs, ensuring smooth user experience and efficient data handling through PHP and MySQL.</p>
+                    <p>Development was carried out using VS Code, with XAMPP and PhpMyAdmin used for local server testing and database management, resulting in a smooth deployment and client satisfaction.</p>
                 </div>
             </div>
         </section>
         <section id="projects" class="section">
             <h2>Projects</h2>
             <div class="project justifier">
-                <h3>Integrated Assistive System for Object Detection and Blind Navigation <span class="toggle-button">+</span></h3>
+                <h3>NavAid <span class="toggle-button">see more</span></h3>
                 <div class="content">
                     <div class="padder">
                         <p>Empowering independence through technology: Explore our integrated assistive system combining advanced object detection and blind navigation, designed to enhance accessibility for individuals with visual impairments. Navigating the world with confidence and precision. </p>
@@ -99,7 +120,7 @@
                 </div>
             </div>
             <div class="project justifier">
-                <h3>Railway Nexus Automata using Flask and OOPs <span class="toggle-button">+</span></h3>
+                <h3>RailNet <span class="toggle-button">see more</span></h3>
                 <div class="content">
                     <div class="padder">
                         <p>The main intention of this project is to eliminate all manual tasks which are hectic to manage, performed by Passengers (For ticket booking and getting train schedules) and employees (managing trains, booked tickets and announcements).</p>
@@ -138,7 +159,7 @@
                 </div>
             </div>
             <div class="project justifier">
-                <h3>Containerization of Applications using Docker and Load Scaling using Kubernetes <span class="toggle-button">+</span></h3>
+                <h3>ScaleServe <span class="toggle-button">see more</span></h3>
                 <div class="content">
                     <div class="padder">
                         <p>Docker is Designed to make applications to be OS independent, portable and easy deployable into containers. Users can just pull the image from registry and work on their host machine. Kubernetes helps us to scale the pods up/down according to user traffic.</p>
@@ -190,7 +211,7 @@
         <section id="skills" class="section">
             <h2>Skills</h2>
             <div class="skills">
-                <h3>Programming Skills <span class="toggle-button">+</span></h3>
+                <h3>Programming Skills <span class="toggle-button">see more</span></h3>
                 <div class="contacts">
                     <div class="elements">Python</div>
                     <div class="elements">HTML</div>
@@ -207,7 +228,7 @@
                 </div>
             </div>
             <div class="skills">
-                <h3>Software Skills <span class="toggle-button">+</span></h3>
+                <h3>Software Skills <span class="toggle-button">see more</span></h3>
                 <div class="contacts">
                     <div class="elements">Windows</div>
                     <div class="elements">Microsoft Office</div>
@@ -223,7 +244,7 @@
                 </div>
             </div>
             <div class="skills">
-                <h3>Soft Skills <span class="toggle-button">+</span></h3>
+                <h3>Soft Skills <span class="toggle-button">see more</span></h3>
                 <div class="contacts">
                     <div class="elements">Time Management</div>
                     <div class="elements">Team player</div>
@@ -234,7 +255,7 @@
         <section id="education" class="section">
             <h2>Education</h2>
             <div class="education">
-                <h3>UNDERGRADUATE EDUCATION <span class="toggle-button">+</span></h3>
+                <h3>UNDERGRADUATE EDUCATION <span class="toggle-button">see more</span></h3>
                 <h4>University:</h4>
                     <p>Madras Institute of Technology</p>
                 <h4>Education Span:</h4>
@@ -250,7 +271,7 @@
                     <p><span></span>Programming Languages (C++, Java, Python)</p>
             </div>
             <div class="education">
-                <h3>HIGHER SECONDARY EDUCATION <span class="toggle-button">+</span></h3>
+                <h3>HIGHER SECONDARY EDUCATION <span class="toggle-button">see more</span></h3>
                     <h4>School:</h4>
                         <p>Shree Venkateshwarar Matriculation Higher Secondary School</p>
                     <h4>Education Span:</h4>
@@ -264,7 +285,7 @@
                         <p><span></span>Computer Science</p>
             </div>
             <div class="education">
-                <h3>SECONDARY EDUCATION <span class="toggle-button">+</span></h3>
+                <h3>SECONDARY EDUCATION <span class="toggle-button">see more</span></h3>
                     <h4>School:</h4>
                         <p>Shree Venkateshwarar Matriculation Higher Secondary School</p>
                     <h4>Education Span:</h4>
@@ -280,18 +301,8 @@
             <h2>Contact</h2>
             <div class="contacts">
                 <div class="details"><a href="mailto:syedsahil28803@gmail.com" target="_blank"><i class="fab fa-google"></i>syedsahil28803@gmail.com</a></div>
-                <div class="details"><a href="https://www.linkedin.com/in/syedsahilzero1/" target="_blank"><i class="fab fa-linkedin"></i>syedsahilzero1</a></div>
+                <div class="details"><a href="https://www.linkedin.com/in/syed-sahil-a-fr35h3r/" target="_blank"><i class="fab fa-linkedin"></i>syed-sahil-a-fr35h3r</a></div>
                 <div class="details"><a href="https://github.com/SyedSahil80328" target="_blank"><i class="fab fa-github"></i>SyedSahil80328</a> </div>
-            </div>
-        </section>
-        <section id="profile" class="section">
-            <h2>Coding Platform Profiles</h2>
-            <div class="contacts">
-                <div class="details"><a href="https://www.geeksforgeeks.org/user/syedsahil28803/" target="_blank">Geeks For Geeks</a></div>
-                <div class="details"><a href="https://leetcode.com/u/syedsahil28803/" target="_blank">LeetCode</a></div>
-                <div class="details"><a href="https://www.hackerrank.com/profile/syedsahil28803" target="_blank">Hackerrank</a></div>
-                <div class="details"><a href="https://www.codechef.com/users/sahil_503" target="_blank">CodeChef</a></div>
-                <div class="details"><a href="https://codeforces.com/profile/SyedSahil80328" target="_blank">CodeForces</a></div>
             </div>
         </section>
     </div>
@@ -302,9 +313,9 @@
                 project.classList.toggle('expanded');
                 const toggleButton = header.querySelector('.toggle-button');
                 if (project.classList.contains('expanded')) {
-                    toggleButton.textContent = '-';
+                    toggleButton.textContent = 'see less';
                 } else {
-                    toggleButton.textContent = '+';
+                    toggleButton.textContent = 'see more';
                 }
             });
         });

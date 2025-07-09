@@ -35,7 +35,7 @@ h3 {
     text-transform: uppercase;
 }
 .container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
     padding: 1em;
@@ -47,38 +47,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 2em; /* Maintain gap between photo and content */
-}
-.profile-img-wrapper {
-    position: relative;
-    width: 300px;
-    height: auto;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    background: linear-gradient(to bottom, #0099cc, #000);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.profile-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    position: relative;
-    z-index: 1;
-}
-.profile-img-wrapper::after {
-    content: "";
-    position: absolute;
-    bottom: -10px; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 20px;
-    background: rgba(0, 153, 204, 0.7);
-    box-shadow: 0 0 20px rgba(0, 153, 204, 0.7);
-    z-index: 0;
+    gap: 2em; 
 }
 .aboutme-text {
     flex: 1;
@@ -173,10 +142,11 @@ footer {
 }
 .toggle-button {
     position: absolute;
-    right: 10px;
     top: 10px;
+    right: 10px;
     cursor: pointer;
     font-size: 16px;
+    font-style: italic;
 }
 .progress-bar2 {
     background-color: #34495e;
@@ -192,38 +162,6 @@ footer {
 }
 .progress {
     height: 10px;
-}
-.blue {
-    background-color: #3498db;
-}
-.orange {
-    background-color: #e67e22;
-}
-.green {
-    background-color: #2ecc71;
-}
-.red {
-    background-color: #e74c3c;
-}
-.purple {
-    background-color: #9b59b6;
-    color: #fff;
-}
-.yellow {
-    background-color: #f1c40f;
-}
-.teal {
-    background-color: #1abc9c;
-}
-.pink {
-    background-color: #ff69b4;
-}
-.brown {
-    background-color: #a52a2a;
-    color: #fff;
-}
-.gray {
-    background-color: #95a5a6;
 }
 .legend {
     display: flex;
@@ -292,5 +230,7 @@ a {
     .elements::before {
         content: ">_ ";
     }
-
+    .aboutme-text div, .aboutme-text .subtitle {
+        text-align: center;
+    }
 }
