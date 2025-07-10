@@ -86,16 +86,35 @@
         <section id="projects" class="section">
             <h2>Projects</h2>
             <div class="project justifier">
-                <h3>NavAid <span class="toggle-button">see more</span></h3>
+                <h3>FallGuard (01/2025 - 05/2025) <span class="toggle-button">see more</span></h3>
                 <div class="content">
                     <div class="padder">
-                        <p>Empowering independence through technology: Explore our integrated assistive system combining advanced object detection and blind navigation, designed to enhance accessibility for individuals with visual impairments. Navigating the world with confidence and precision. </p>
-                        <p>The system is developed using Raspberry Pi and is related to IoT. It uses Cascade Classifier for detecting Human Faces and SSD MobileNet for detecting and classifying 91 different objects. The system is designed to alert users by identifying objects using pyttsx3 (text-to-speech library) and OpenCV (computer vision library).</p>
-                        <p>We got fund to implement this project from Centre for Sponsored Research and Consultancy, by Anna University through the scheme "Student Innovative Projects".</p>
+                        <p>FallGuard is a fall detection system built to overcome key limitations of vision-based approaches, such as privacy concerns and camera blind spots. It leverages wearable sensor data to provide accurate and real-time fall detection, offering a reliable alternative in both indoor and outdoor settings.</p>
+                        <p>The system utilizes triaxial accelerometer signals from wearable devices, augmented using SMOTE to address class imbalance. It employs an enhanced InceptionTimePlus architecture tailored for time series classification, capturing subtle temporal dynamics associated with fall events.</p>
+                        <p>FallGuard achieved a classification accuracy of 98.84% and a fooling rate of 96.29%, outperforming four established deep learning baselines. Its strong performance and generalizability make it well-suited for integration into healthcare monitoring systems.</p>
                     </div>
-                    <h3>Technologies Used</h3>
+                </div>
+            </div>
+            <div class="project justifier">
+                <h3>GaitSense (01/2024 - 05/2024) <span class="toggle-button">see more</span></h3>
+                <div class="content">
                     <div class="padder">
-                        <h4>Programming Languages</h4>
+                        <p>GaitSense is a drift-aware classification system designed to identify temporal distribution shifts in gait signals, particularly those linked to freezing episodes in Parkinsonian movement. It addresses a significant 43.35% classification accuracy drop typically caused by such shifts in time series data.</p>
+                        <p>The model architecture integrates Principal Component Analysis (PCA) for dimensionality reduction, SMOTE for handling class imbalance, and Temporal Convolutional Networks (TCNs) to classify drifts detected using a Bayesian change detector. The input comprises triaxial accelerometer signals, allowing fine-grained temporal pattern recognition.</p>
+                        <p>Tested on the Daphnet Freezing of Gait dataset, GaitSense outperformed three state-of-the-art drift detectors, achieving 96.9% classification accuracy and a 92.3% fooling rate, demonstrating its robustness in dynamic and high-noise environments.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project justifier">
+                <h3>NavAid (09/2023 - 03/2024)<span class="toggle-button">see more</span></h3>
+                <div class="content">
+                    <div class="padder">
+                        <p>NavAid is an assistive navigation system designed to support visually impaired users by detecting up to 91 objects and providing real-time voice guidance along with GPS-based location sharing. The system enables users to navigate their surroundings safely and independently, both indoors and outdoors.</p>
+                        <p>It is developed using YOLO for general object detection, Haar cascades for face recognition, pyttsx3 for voice output, and LangChain for enabling offline navigation logic. Integrated GPS sharing further enhances user safety by allowing real-time tracking and assistance when needed.</p>
+                        <p>The entire solution is deployed on a Raspberry Pi, achieving a detection accuracy of 98.63% in live conditions. Real-time performance and offline capability make NavAid a reliable companion for enhancing mobility and accessibility among the visually impaired.</p>
+                    </div>
+                    <h3>GitHub Stats with Hardwares for NavAid</h3>
+                    <div class="padder">
                         <div class="progress-bar2">
                             <div class="progress blue" style="width: 97.1%;"></div>
                             <div class="progress orange" style="width: 2.9%;"></div>
@@ -110,32 +129,31 @@
                                 <div class="legend-text">SHELL 2.9%</div>
                             </div>
                         </div>
-                        <h4>Hardware Tools</h4>
-                        <ul>
-                            <li><p>Raspberry PI Computer</p></li>
-                            <li><p>Micro SD Card</p></li>
-                            <li><p>Raspberry PI adapter or battery</p></li>
-                            <li><p>Any type of lightweight cap</p></li>
-                            <li><p>Speaker or Headphones</p></li>
-                            <li><p>PI Camera or USB Webcam</p></li>
-                            <li><p>Raspberry PI Case with fan</p></li>
-                            <li><p>Raspberry PI Heatsink</p></li>
-                        </ul>
+                        <div class="contacts" style="margin-top: 20px;">
+                            <div class="elements">Raspberry Pi Computer</div>
+                            <div class="elements">Micro SD Card</div>
+                            <div class="elements">Raspberry Pi Adapter or Battery</div>
+                            <div class="elements">Any Type of Lightweight Cap</div>
+                            <div class="elements">Speaker or Headphones</div>
+                            <div class="elements">Pi Camera or USB Webcam</div>
+                            <div class="elements">Raspberry Pi Case with Fan</div>
+                            <div class="elements">Raspberry Pi Heatsink</div>
+                        </div>
                         <p>I contributed to this project by hardware procurement and assembly, Documentation, Configuring raspberry PI.</p>
                         <p>For more details click <a href="https://github.com/SyedSahil80328/Integrated-Assistive-System-For-Object-Detection-And-Blind-Navigation.git" target="_blank">View Code</a></p>
                     </div>
                 </div>
             </div>
             <div class="project justifier">
-                <h3>RailNet <span class="toggle-button">see more</span></h3>
+                <h3>RailNet (10/2023 - 01/2024) <span class="toggle-button">see more</span></h3>
                 <div class="content">
                     <div class="padder">
-                        <p>The main intention of this project is to eliminate all manual tasks which are hectic to manage, performed by Passengers (For ticket booking and getting train schedules) and employees (managing trains, booked tickets and announcements).</p>
-                        <p>The system is designed with a web application to manage railway operations using frontend tools and the Python Flask framework. Implemented Flask programs based on Object-Oriented Programming (OOP) Concepts and used TDES encryption to secure authentication and authorization. Utilized Python tools like pdfkit for generating tickets and gTTS (Google Text-to-Speech) for vocal announcements.</p>
+                        <p>Streamlining railway operations through smart technology: This web application was developed to efficiently manage train schedules and over 100 booking records with a focus on security and usability. The platform ensures authenticated access to sensitive operations and ticketing functions, tailored for administrative control and user convenience.</p>
+                        <p>The system leverages Flask for backend routing and session management, MySQL for structured data storage, and HTML, CSS, and JavaScript for a responsive front-end interface. Secure transactions and login processes were reinforced using Triple DES (TDES) encryption. The backend logic followed Object-Oriented Programming principles, enabling scalable and maintainable code.</p>
+                        <p>Key features include automated PDF ticket generation for every booking and real-time voice alerts to guide users through the interface, both of which enhanced overall usability. During testing, the solution performed successfully across 90% of scenarios, demonstrating its reliability in real-world conditions.</p>
                     </div>
-                    <h3>Technologies Used</h3>
+                    <h3>GitHub Stats for RailNet</h3>
                     <div class="padder">
-                        <h4>Programming Languages</h4>
                         <div class="progress-bar2">
                             <div class="progress blue" style="width: 57.3%;"></div>
                             <div class="progress orange" style="width: 33.6%;"></div>
@@ -166,15 +184,14 @@
                 </div>
             </div>
             <div class="project justifier">
-                <h3>ScaleServe <span class="toggle-button">see more</span></h3>
+                <h3>ScaleServe (02/2023 - 05/2023)<span class="toggle-button">see more</span></h3>
                 <div class="content">
                     <div class="padder">
                         <p>Docker is Designed to make applications to be OS independent, portable and easy deployable into containers. Users can just pull the image from registry and work on their host machine. Kubernetes helps us to scale the pods up/down according to user traffic.</p>
                         <p>This project "Containerization using Docker and load scaling using Kubernetes" offers a lightweight, efficient, scalable, and highly portable alternative to traditional VMs, making it a powerful solution for modern cloud-native applications.</p>
                     </div>
-                    <h3>Technologies Used</h3>
+                    <h3>GitHub Stats for ScaleServe</h3>
                     <div class="padder">
-                        <h4>Programming Languages</h4>
                         <div class="progress-bar2">
                             <div class="progress blue" style="width: 71.3%;"></div>
                             <div class="progress orange" style="width: 20.7%;"></div>
@@ -218,90 +235,115 @@
         <section id="skills" class="section">
             <h2>Skills</h2>
             <div class="skills">
-                <h3>Programming Skills <span class="toggle-button">see more</span></h3>
+                <h3>Software/Development Tools <span class="toggle-button">see more</span></h3>
                 <div class="contacts">
-                    <div class="elements">Python</div>
-                    <div class="elements">HTML</div>
-                    <div class="elements">CSS</div>
-                    <div class="elements">JavaScript</div>
-                    <div class="elements">Java</div>
-                    <div class="elements">C++</div>
-                    <div class="elements">C</div>
-                    <div class="elements">PHP</div>
-                    <div class="elements">Python Flask</div>
-                    <div class="elements">SQL</div>
-                    <div class="elements">Markdown</div>
-                    <div class="elements">Bash</div>
-                </div>
-            </div>
-            <div class="skills">
-                <h3>Software Skills <span class="toggle-button">see more</span></h3>
-                <div class="contacts">
-                    <div class="elements">Windows</div>
-                    <div class="elements">Microsoft Office</div>
-                    <div class="elements">Linux</div>
-                    <div class="elements">VS Code</div>
-                    <div class="elements">Canva</div>
-                    <div class="elements">PowerShell</div>
-                    <div class="elements">Github</div>
+                    <div class="elements">Xcode</div>
+                    <div class="elements">Visual Studio Code</div>
                     <div class="elements">Git</div>
+                    <div class="elements">ChatGPT</div>
+                    <div class="elements">Terminal</div>
+                    <div class="elements">GitHub</div>
+                    <div class="elements">Google Colab</div>
                     <div class="elements">Docker</div>
                     <div class="elements">Kubernetes</div>
-                    <div class="elements">Logicly</div>
                 </div>
             </div>
+
             <div class="skills">
                 <h3>Soft Skills <span class="toggle-button">see more</span></h3>
                 <div class="contacts">
+                    <div class="elements">Collaboration</div>
+                    <div class="elements">Critical Thinking</div>
                     <div class="elements">Time Management</div>
-                    <div class="elements">Team player</div>
-                    <div class="elements">Creativity</div>
+                    <div class="elements">Software Development</div>
+                    <div class="elements">Growth Mindset</div>
                 </div>
             </div>
+
+            <div class="skills">
+                <h3>Languages <span class="toggle-button">see more</span></h3>
+                <div class="contacts">
+                    <div class="elements">Swift</div>
+                    <div class="elements">Python</div>
+                    <div class="elements">Java</div>
+                    <div class="elements">HTML</div>
+                    <div class="elements">CSS</div>
+                    <div class="elements">JavaScript</div>
+                    <div class="elements">PHP</div>
+                    <div class="elements">C</div>
+                    <div class="elements">C++</div>
+                    <div class="elements">SQL</div>
+                    <div class="elements">Kotlin</div>
+                </div>
+            </div>
+
+            <div class="skills">
+                <h3>Hardware and OS <span class="toggle-button">see more</span></h3>
+                <div class="contacts">
+                    <div class="elements">iOS Mobile</div>
+                    <div class="elements">Raspberry Pi</div>
+                    <div class="elements">Digital Components</div>
+                    <div class="elements">Windows</div>
+                    <div class="elements">Ubuntu</div>
+                    <div class="elements">Mac OS</div>
+                </div>
+            </div>
+
         </section>
         <section id="education" class="section">
             <h2>Education</h2>
             <div class="education">
-                <h3>UNDERGRADUATE EDUCATION <span class="toggle-button">see more</span></h3>
+                <h3>Bachelor of Engineering - CS <span class="toggle-button">see more</span></h3>
                 <h4>University:</h4>
-                    <p>Madras Institute of Technology</p>
+                <p>Madras Institute of Technology</p>
                 <h4>Education Span:</h4>
-                    <p>2021 - 2025 (In Progress)</p>
+                <p>09/2021 - 07/2025</p>
                 <h4>Academic Score (CGPA):</h4>
-                    <p>9.18 Till 5th semester</p>
+                <p>9.05</p>
                 <h4>Relevant Courseworks:</h4>
-                    <p><span></span>Data Structures and Algorithms</p>
-                    <p><span></span>Database Management Systems</p>
-                    <p><span></span>Operating Systems</p>
-                    <p><span></span>Object Oriented Analysis and Design</p>
-                    <p><span></span>Application Development Practices</p>
-                    <p><span></span>Programming Languages (C++, Java, Python)</p>
+                <div class="contacts">
+                    <div class="elements">C Programming</div>
+                    <div class="elements">Java Programming</div>
+                    <div class="elements">Advanced Data Processing (ADP)</div>
+                    <div class="elements">Data Structures and Algorithms (DSA)</div>
+                    <div class="elements">Database Management Systems (DBMS)</div>
+                    <div class="elements">Operating Systems (OS)</div>
+                    <div class="elements">Machine Learning (ML)</div>
+                    <div class="elements">Information Security</div>
+                </div>
             </div>
             <div class="education">
                 <h3>HIGHER SECONDARY EDUCATION <span class="toggle-button">see more</span></h3>
                     <h4>School:</h4>
-                        <p>Shree Venkateshwarar Matriculation Higher Secondary School</p>
+                    <p>Shree Venkateshwarar Matriculation Higher Secondary School</p>
                     <h4>Education Span:</h4>
-                        <p>2019 - 2021 (Past Education)</p>
+                    <p>06/2019 - 03/2021</p>
                     <h4>Academic Score (Percentage):</h4>
-                        <p>97.17</p>
+                    <p>97.17</p>
                     <h4>Relevant Courseworks:</h4>
-                        <p><span></span>Mathematics</p>
-                        <p><span></span>C++ Programming</p>
-                        <p><span></span>Python Programming</p>
-                        <p><span></span>Computer Science</p>
+                    <div class="contacts">
+                        <div class="elements">Mathematics</div>
+                        <div class="elements">C++ Programming</div>
+                        <div class="elements">Python Programming</div>
+                        <div class="elements">Computer Science</div>
+                    </div>    
             </div>
             <div class="education">
                 <h3>SECONDARY EDUCATION <span class="toggle-button">see more</span></h3>
                     <h4>School:</h4>
-                        <p>Shree Venkateshwarar Matriculation Higher Secondary School</p>
+                    <p>Shree Venkateshwarar Matriculation Higher Secondary School</p>
                     <h4>Education Span:</h4>
-                        <p>2017 - 2019 (Past Education)</p>
+                    <p>06/2017 - 04/2019</p>
                     <h4>Academic Score (Percentage):</h4>
-                        <p>93</p>
+                    <p>93</p>
                     <h4>Relevant Courseworks:</h4>
-                        <p><span></span>Mathematics</p>
-                        <p><span></span>Science (Botany, Zoology, Chemistry, Physics)</p>
+                    <div class="contacts">
+                        <div class="elements">Mathematics</div>
+                        <div class="elements">Botany</div>
+                        <div class="elements">Zoology</div>
+                        <div class="elements">Chemistry</div>
+                        <div class="elements">Physics</div>
+                    </div>  
             </div>
         </section>
         <section id="contact" class="section">
