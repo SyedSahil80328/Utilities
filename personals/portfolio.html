@@ -55,9 +55,7 @@
                     <p>My responsibilities included refactoring iOS code, designing UI components, and writing unit tests with 90% coverage to support product release stability and reliability.</p>
                     <p>I also led a backend migration task, transitioning SafeSocial’s data from PostgreSQL to DynamoDB, which improved query latency by 35% for large datasets.</p>
                     <p><strong>Technologies:</strong> Swift, UIKit, SwiftUI, MVVM, MVVM-C, XCTest, Xcode</p>
-                    <div class="award">
-                        <div id="gen-internship"></div>
-                    </div>
+                    <p><a href="Assets/Gen - Internship Completion Letter.pdf" target="_blank"><i class="fas fa-file-pdf"></i> View Internship Completion Letter</a></p>
                 </div>
             </div>
             <div class="experience justifier">
@@ -68,9 +66,7 @@
                     <p>We built <strong>NavAid</strong>, a real-time voice-guided system capable of detecting 91 object classes with 98.63% accuracy. I was involved in hardware procurement, Raspberry Pi setup, and peripheral integration.</p>
                     <p>The project featured dual-mode navigation using GPS and an offline fallback powered by LangChain. I also contributed to the documentation process, capturing development and workflow stages with technical figures.</p>
                     <p><strong>Technologies:</strong> Python, OpenCV, Raspberry Pi, YOLO, Haar Cascades, LangChain, pyttsx3</p>
-                    <div class="award">
-                        <div id="au-csrc"></div>
-                    </div>
+                    <p><a href="Assets/CSRC SIP Certificate.pdf" target="_blank"><i class="fas fa-file-pdf"></i> View CSRC SIP Certificate</a></p>
                 </div>
             </div>
             <div class="experience justifier">
@@ -369,23 +365,23 @@
             });
         });
 
-        function adjustContent() {
-            document.querySelectorAll('.award').forEach(function(award) {
-                const genExperience = document.getElementById('gen-internship');
-                const auExperience = document.getElementById('au-csrc');
+        // function adjustContent() {
+        //     document.querySelectorAll('.award').forEach(function(award) {
+        //         const genExperience = document.getElementById('gen-internship');
+        //         const auExperience = document.getElementById('au-csrc');
 
-                if (window.innerWidth < 768) {
-                    genExperience.innerHTML = '<p><a href="Assets/Gen - Internship Completion Letter.pdf" target="_blank"><i class="fas fa-file-pdf"></i> View Internship Completion Letter</a></p>';
-                    auExperience.innerHTML = '<p><a href="Assets/CSRC SIP Certificate.pdf" target="_blank"><i class="fas fa-file-pdf"></i> View CSRC SIP Certificate</a></p>';
-                } else {
-                    genExperience.innerHTML = '<iframe src="Assets/Gen - Internship Completion Letter.pdf" width="100%" height="700px" style="border: none;"></iframe>';
-                    auExperience.innerHTML = '<iframe src="Assets/CSRC SIP Certificate.pdf" width="100%" height="700px" style="border: none;"></iframe>';
-                }
-            });
-        }
+        //         if (window.innerWidth < 768) {
+        //             genExperience.innerHTML = '<p><a href="Assets/Gen - Internship Completion Letter.pdf" target="_blank"><i class="fas fa-file-pdf"></i> View Internship Completion Letter</a></p>';
+        //             auExperience.innerHTML = '<p><a href="Assets/CSRC SIP Certificate.pdf" target="_blank"><i class="fas fa-file-pdf"></i> View CSRC SIP Certificate</a></p>';
+        //         } else {
+        //             genExperience.innerHTML = '<iframe src="Assets/Gen - Internship Completion Letter.pdf" width="100%" height="700px" style="border: none;"></iframe>';
+        //             auExperience.innerHTML = '<iframe src="Assets/CSRC SIP Certificate.pdf" width="100%" height="700px" style="border: none;"></iframe>';
+        //         }
+        //     });
+        // }
 
-        adjustContent();
-        window.addEventListener('resize', adjustContent);
+        // adjustContent();
+        // window.addEventListener('resize', adjustContent);
 
     </script>
     <footer>
