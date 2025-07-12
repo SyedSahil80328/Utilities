@@ -26,11 +26,11 @@ body {
 }
 h2 {
     font-size: xx-large;
-    font-family: "Ga Maamli";
+    font-family: "Chakra Petch", sans-serif;
     text-transform: uppercase;
 }
 h3 {
-    font-family: "Graduate", Arial, sans-serif;
+    font-family: "Chakra Petch", Arial, sans-serif;
     font-size: x-large;
     text-transform: uppercase;
 }
@@ -191,13 +191,16 @@ footer {
 a {
     color: #3498db
 }
-.contacts {
+.set-container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-.elements {
+.link-modifier {
+    text-decoration: none;
+}
+.element {
     text-decoration: none;
     color: black;
     background-color: #b9faf8;
@@ -220,14 +223,15 @@ a {
     .profile-img-wrapper {
         margin: 0 0 1em 0;
     }
-    .contacts {
+    .set-container {
         display: block;
     }
-    .elements {
+    .element {
         background: none;
         color: white;
+        margin-bottom: 10px;
     }
-    .elements::before {
+    .element::before {
         content: ">_ ";
     }
     .aboutme-text div, .aboutme-text .subtitle {
